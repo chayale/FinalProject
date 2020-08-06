@@ -1,0 +1,27 @@
+<ion-content fullscreen='true'>
+  <div >
+<p>
+  
+ 
+ 
+
+
+  </p>
+  </div>
+<ion-button (click)="loadBusinesses()">load business</ion-button>
+
+<!-- <ion-item>
+  <ion-label>Business</ion-label>
+  <ion-select  multiple="true">
+    <ion-select-option *ngFor="let item of businessList">
+      {{item.name}}
+    </ion-select-option>
+  </ion-select>
+</ion-item> -->
+<ion-item *ngFor="let item of businessList">
+ 
+  
+      {{item.name}}
+    
+</ion-item>
+</ion-content>

@@ -1,0 +1,73 @@
+<ion-contant [fullscreen]="true">
+ <ion-list>
+  <form>
+    <ion-grid>
+<ion-row>
+  <ion-col>
+    <ion-item>
+      <ion-label>תאריך</ion-label>
+      <ion-datetime  type="ion-datetime"  display-format="MMM DD" picker-format="MMM DD" 
+       [(ngModel)]="timeRange.day" name="day"></ion-datetime>
+    </ion-item>
+  </ion-col>
+</ion-row>
+<ion-row>
+  <ion-col>
+    <ion-item>
+      <ion-label position="floating">משעה</ion-label>
+      <ion-datetime  type="ion-datetime"  display-format="h:mm A" picker-format="h:mm A"
+       value="1990-02-19T07:43Z" [(ngModel)]="timeRange.startTime" name="startTime"></ion-datetime>
+    </ion-item>
+  </ion-col>
+
+  <ion-col>
+    <ion-item>
+      <ion-label position="floating">עד שעה</ion-label>
+      <ion-datetime  type="ion-datetime"  display-format="h:mm A" picker-format="h:mm A"
+       value="1990-02-19T07:43Z" [(ngModel)]="timeRange.endTime" name="endTime"></ion-datetime>
+    </ion-item>
+  </ion-col>
+</ion-row>
+<ion-row>
+  <ion-col>
+    <ion-item>
+      <ion-label position="floating">נקודת מוצא</ion-label>
+      <ion-input [(ngModel)]="areaRange.destinationPoint" name="destinationPoint"></ion-input>
+    </ion-item>
+  </ion-col>
+  <ion-col>
+    <ion-item>
+      <ion-label position="floating">נקודת יעד</ion-label>
+      <ion-input [(ngModel)]="areaRange.startingPoint" name="startingPoint"></ion-input>
+    </ion-item>
+  </ion-col>
+</ion-row>
+<ion-row>
+  <ion-col>
+    <ion-item>
+      <ion-label>Walking By</ion-label>
+      <ion-select value="car" [(ngModel)]="walkingBy" name="walkingBy"
+    >
+        <ion-select-option value="car">ברכב</ion-select-option>
+        <ion-select-option value="foot">ברגל</ion-select-option>
+      </ion-select>
+    </ion-item>
+  </ion-col>
+</ion-row>
+<ion-row>
+  <ion-col>
+    <ion-button (click)="saveDetails()">
+      save
+    </ion-button>
+  </ion-col>
+  <ion-col>
+    <ion-button (click)="presentModal()">
+      בחר בתי עסק
+    </ion-button>
+  </ion-col>
+</ion-row>
+    </ion-grid>
+  </form>
+ </ion-list>
+</ion-contant>
+
